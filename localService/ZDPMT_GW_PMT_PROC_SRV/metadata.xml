@@ -1,0 +1,173 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZDPMT_GW_PMT_PROC_SRV" xml:lang="en" sap:schema-version="1">
+			<EntityType Name="DynEnt" sap:content-version="1">
+				<Key><PropertyRef Name="PROJECT_ID"/><PropertyRef Name="PROCESS_ID"/></Key><Property Name="PROJECT_ID" Type="Edm.String" Nullable="false" MaxLength="20" sap:semantics="fixed-values" sap:unicode="false"
+					sap:label="Project ID" sap:value-list="fixed-values"/><Property Name="PROCESS_ID" Type="Edm.String" Nullable="false" MaxLength="20" sap:semantics="fixed-values" sap:unicode="false"
+					sap:label="ProcessID" sap:value-list="fixed-values"/><NavigationProperty Name="Nav_DynEntToDynEntItem" Relationship="ZDPMT_GW_PMT_PROC_SRV.Ass_DynEntToDynEntItem"
+					FromRole="FromRole_Ass_DynEntToDynEntItem" ToRole="ToRole_Ass_DynEntToDynEntItem"/></EntityType>
+			<EntityType Name="DynEntItem" sap:content-version="1">
+				<Key><PropertyRef Name="PROJECT_ID"/></Key><Property Name="ACT_CODE_COMP" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Act Code compl"/><Property Name="ACT_FS_SUB" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Act FS Sub Dt"/><Property Name="ACT_FUT_END_DT" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Act FUT End Date"/><Property Name="ACT_FUT_ST_DT" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Act FUT Start Date"/><Property Name="ACT_TS_COMP_DT" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Act TS Comp Date"/><Property Name="ACT_TS_ST_DT" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Act TS Start Date"/><Property Name="ACT_TUT_END_DT" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Act TUT End Date"/><Property Name="ACT_TUT_ST_DT" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Act TUT Start Date"/><Property Name="ASS_DATE" Type="Edm.String" MaxLength="8" sap:unicode="false" sap:label="Date"/><Property Name="BL_IT_CONT" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="Buss/Leg IT Cont"/><Property Name="CODE_COMP_PER" Type="Edm.Decimal" Precision="3" Scale="2" sap:unicode="false" sap:label="Code % Completion"/><Property Name="CODE_DEV" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="Code Developer"/><Property Name="CODE_STAT" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="Code status"/><Property Name="COMMENTS" Type="Edm.String" MaxLength="255" sap:unicode="false" sap:label="COMMENTS"/><Property Name="COMPLEXITY" Type="Edm.String" MaxLength="100" sap:semantics="fixed-values" sap:label="Complexity"
+					sap:value-list="fixed-values"/><Property Name="CR" Type="Edm.String" MaxLength="20" sap:semantics="fixed-values" sap:label="CR#"/><Property Name="CRQ" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="CRQ"/><Property Name="CR_PER" Type="Edm.Decimal" Precision="3" Scale="2" sap:unicode="false" sap:label="CR %"/><Property Name="DESCRIPTION" Type="Edm.String" MaxLength="100" sap:unicode="false" sap:label="RICEFID Description"/><Property Name="EFFORT" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="Effort"/><Property Name="EXP_FS_ACC" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Exp FS Acc Date"/><Property Name="FIELDNAME" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Field Name" sap:value-list="standard"/><Property Name="FSD_COMP" Type="Edm.Decimal" Precision="3" Scale="2" sap:unicode="false" sap:label="FSD % Complete"/><Property Name="FS_ACC_DATE" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="FS Acc Date"/><Property Name="FS_APRV_LEG" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="FS Approver (Leg)"/><Property Name="FS_OWNER" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="FS Owner"/><Property Name="FUT_COMP_PER" Type="Edm.Decimal" Precision="3" Scale="2" sap:unicode="false" sap:label="FUT % Complete"/><Property Name="IF_TEST_START" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Interface Test Start"/><Property Name="IOR" Type="Edm.Decimal" Precision="3" Scale="2" sap:unicode="false" sap:label="IOR"/><Property Name="LEG_BLD_END" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Legacy Build End"/><Property Name="LEG_BLD_EST" Type="Edm.String" MaxLength="5" sap:unicode="false" sap:label="Legacy Build Est"/><Property Name="LEG_BLD_START" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Legacy Build Start"/><Property Name="LEG_COMPLEXITY" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="Legacy Complexity"/><Property Name="LEG_EST_END" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Legacy Est End"/><Property Name="LEG_EST_START" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Legacy Est Start"/><Property Name="LEG_IMP" Type="Edm.String" MaxLength="1" sap:semantics="fixed-values" sap:label="LegacyImpact" sap:value-list="fixed-values"/><Property Name="LEG_LOAD_BAL" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Legacy Load Bal"/><Property Name="LEG_OWNER" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="Legacy Owner"/><Property Name="LEG_RES_POOL" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Legacy Res Pool"/><Property Name="LEG_SYST" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="Legacy System"/><Property Name="MIDDLEWARE" Type="Edm.String" MaxLength="50" sap:semantics="fixed-values" sap:label="Middleware"
+					sap:value-list="fixed-values"/><Property Name="OBJSTAT" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="Obj.Status"/><Property Name="PHASE" Type="Edm.String" MaxLength="20" sap:semantics="fixed-values" sap:label="Phase" sap:value-list="fixed-values"/><Property Name="PLN_CODE_COMP" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Pln Code Comp"/><Property Name="PLN_FS_SUB_DT" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Pl.FS.Sub.Dt"/><Property Name="PLN_FUT_END_DT" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Pln FUT End Date"/><Property Name="PLN_FUT_ST_DT" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Pln FUT Start Date"/><Property Name="PLN_TS_COMP" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Pln TS Comp Date"/><Property Name="PLN_TS_ST_DT" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Pln FS Start Date"/><Property Name="PLN_TUT_END_DT" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Pln TUT End Date"/><Property Name="PLN_TUT_ST_DT" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Pln TUT Start Date"/><Property Name="PRJ_TECH_CON" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="Proj Tech Contact"/><Property Name="PROCESSAREA" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="Proc. Area" sap:value-list="fixed-values"/><Property Name="PROCESS_ID" Type="Edm.String" Nullable="false" MaxLength="20" sap:semantics="fixed-values" sap:unicode="false"
+					sap:label="ProcessID"/><Property Name="PROC_LEAD" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="Process Lead"/><Property Name="PROJECT_ID" Type="Edm.String" Nullable="false" MaxLength="20" sap:semantics="fixed-values" sap:unicode="false"
+					sap:label="Project ID"/><Property Name="REUSETYP" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="Reuse Type"/><Property Name="RICEFW_ID" Type="Edm.String" Nullable="false" MaxLength="50" sap:semantics="fixed-values" sap:label="Ricef ID"/><Property Name="RICEFW_TYP" Type="Edm.String" MaxLength="10" sap:semantics="fixed-values" sap:label="Ricef Type"
+					sap:value-list="fixed-values"/><Property Name="SUB_PROC" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="Sub Proc"/><Property Name="TEAM" Type="Edm.String" MaxLength="100" sap:unicode="false" sap:label="Team"/><Property Name="TECH_COMM" Type="Edm.String" MaxLength="255" sap:unicode="false" sap:label="Tech Comments"/><Property Name="TSR_PER" Type="Edm.Decimal" Precision="3" Scale="2" sap:unicode="false" sap:label="TSR %"/><Property Name="TS_COMP_PER" Type="Edm.Decimal" Precision="3" Scale="2" sap:unicode="false" sap:label="TS % Completion"/><Property Name="TS_DEV" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="TS Developer"/><Property Name="TS_STAT" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="TS Status" sap:value-list="fixed-values"/><Property Name="TUT_COMP_PER" Type="Edm.Decimal" Precision="3" Scale="2" sap:unicode="false" sap:label="TUT % Complete"/><Property Name="TUT_STAT" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="TUT Status"/></EntityType>
+			<EntityType Name="VL_CH_DD03L" sap:value-list="true" sap:content-version="1">
+				<Key><PropertyRef Name="TABNAME"/><PropertyRef Name="FIELDNAME"/><PropertyRef Name="AS4LOCAL"/><PropertyRef Name="AS4VERS"/><PropertyRef Name="POSITION"/></Key><Property Name="TABNAME" Type="Edm.String" Nullable="false" MaxLength="30" sap:display-format="UpperCase" sap:label="Table Name"
+					sap:sortable="false"/><Property Name="FIELDNAME" Type="Edm.String" Nullable="false" MaxLength="30" sap:display-format="UpperCase" sap:label="Field Name"
+					sap:sortable="false" sap:value-list="standard"/><Property Name="AS4LOCAL" Type="Edm.String" Nullable="false" MaxLength="1" sap:display-format="UpperCase" sap:label="Activation Status"
+					sap:sortable="false"/><Property Name="AS4VERS" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="NonNegative" sap:label="Version"
+					sap:sortable="false"/><Property Name="POSITION" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="NonNegative" sap:label="Table position"
+					sap:sortable="false"/></EntityType>
+			<EntityType Name="VL_FV_ZDPMT_DO_COMPLEXITY" sap:value-list="true" sap:content-version="1">
+				<Key><PropertyRef Name="Code"/></Key><Property Name="Code" Type="Edm.String" Nullable="false" MaxLength="100" sap:text="Text" sap:label="Value"/><Property Name="Text" Type="Edm.String" MaxLength="60" sap:label="Short Descript."/></EntityType>
+			<EntityType Name="VL_FV_ZDPMT_DO_LEG_IMP" sap:value-list="true" sap:content-version="1">
+				<Key><PropertyRef Name="Code"/></Key><Property Name="Code" Type="Edm.String" Nullable="false" MaxLength="1" sap:text="Text" sap:label="Value"/><Property Name="Text" Type="Edm.String" MaxLength="60" sap:label="Short Descript."/></EntityType>
+			<EntityType Name="VL_FV_ZDPMT_DO_MIDDLEWARE" sap:value-list="true" sap:content-version="1">
+				<Key><PropertyRef Name="Code"/></Key><Property Name="Code" Type="Edm.String" Nullable="false" MaxLength="50" sap:text="Text" sap:label="Value"/><Property Name="Text" Type="Edm.String" MaxLength="60" sap:label="Short Descript."/></EntityType>
+			<EntityType Name="VL_FV_ZDPMT_DO_PHASE" sap:value-list="true" sap:content-version="1">
+				<Key><PropertyRef Name="Code"/></Key><Property Name="Code" Type="Edm.String" Nullable="false" MaxLength="20" sap:text="Text" sap:label="Value"/><Property Name="Text" Type="Edm.String" MaxLength="60" sap:label="Short Descript."/></EntityType>
+			<EntityType Name="VL_FV_ZDPMT_DO_PROCESSAREA" sap:value-list="true" sap:content-version="1">
+				<Key><PropertyRef Name="Code"/></Key><Property Name="Code" Type="Edm.String" Nullable="false" MaxLength="50" sap:text="Text" sap:label="Value"/><Property Name="Text" Type="Edm.String" MaxLength="60" sap:label="Short Descript."/></EntityType>
+			<EntityType Name="VL_FV_ZDPMT_DO_RICEFW_TYP" sap:value-list="true" sap:content-version="1">
+				<Key><PropertyRef Name="Code"/></Key><Property Name="Code" Type="Edm.String" Nullable="false" MaxLength="10" sap:text="Text" sap:label="Value"/><Property Name="Text" Type="Edm.String" MaxLength="60" sap:label="Short Descript."/></EntityType>
+			<EntityType Name="VL_FV_ZDPMT_DO_TS_STAT" sap:value-list="true" sap:content-version="1">
+				<Key><PropertyRef Name="Code"/></Key><Property Name="Code" Type="Edm.String" Nullable="false" MaxLength="20" sap:text="Text" sap:label="Value"/><Property Name="Text" Type="Edm.String" MaxLength="60" sap:label="Short Descript."/></EntityType>
+			<Association Name="Ass_DynEntToDynEntItem" sap:content-version="1"><End Type="ZDPMT_GW_PMT_PROC_SRV.DynEnt" Multiplicity="*" Role="FromRole_Ass_DynEntToDynEntItem"/><End Type="ZDPMT_GW_PMT_PROC_SRV.DynEntItem" Multiplicity="*" Role="ToRole_Ass_DynEntToDynEntItem"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_Ass_DynEntToDynEntItem"><PropertyRef Name="PROJECT_ID"/><PropertyRef Name="PROCESS_ID"/></Principal>
+					<Dependent Role="ToRole_Ass_DynEntToDynEntItem"><PropertyRef Name="PROJECT_ID"/><PropertyRef Name="PROCESS_ID"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<EntityContainer Name="ZDPMT_GW_PMT_PROC_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="VL_CH_DD03L" EntityType="ZDPMT_GW_PMT_PROC_SRV.VL_CH_DD03L" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:content-version="1" sap:countable="false" sap:semantics="aggregate"/><EntitySet Name="VL_FV_ZDPMT_DO_COMPLEXITY" EntityType="ZDPMT_GW_PMT_PROC_SRV.VL_FV_ZDPMT_DO_COMPLEXITY" sap:content-version="1"
+				sap:semantics="fixed-values"/><EntitySet Name="VL_FV_ZDPMT_DO_LEG_IMP" EntityType="ZDPMT_GW_PMT_PROC_SRV.VL_FV_ZDPMT_DO_LEG_IMP" sap:content-version="1"
+				sap:semantics="fixed-values"/><EntitySet Name="VL_FV_ZDPMT_DO_MIDDLEWARE" EntityType="ZDPMT_GW_PMT_PROC_SRV.VL_FV_ZDPMT_DO_MIDDLEWARE" sap:content-version="1"
+				sap:semantics="fixed-values"/><EntitySet Name="VL_FV_ZDPMT_DO_PHASE" EntityType="ZDPMT_GW_PMT_PROC_SRV.VL_FV_ZDPMT_DO_PHASE" sap:content-version="1"
+				sap:semantics="fixed-values"/><EntitySet Name="VL_FV_ZDPMT_DO_PROCESSAREA" EntityType="ZDPMT_GW_PMT_PROC_SRV.VL_FV_ZDPMT_DO_PROCESSAREA" sap:content-version="1"
+				sap:semantics="fixed-values"/><EntitySet Name="VL_FV_ZDPMT_DO_RICEFW_TYP" EntityType="ZDPMT_GW_PMT_PROC_SRV.VL_FV_ZDPMT_DO_RICEFW_TYP" sap:content-version="1"
+				sap:semantics="fixed-values"/><EntitySet Name="VL_FV_ZDPMT_DO_TS_STAT" EntityType="ZDPMT_GW_PMT_PROC_SRV.VL_FV_ZDPMT_DO_TS_STAT" sap:content-version="1"
+				sap:semantics="fixed-values"/><EntitySet Name="DynEntSet" EntityType="ZDPMT_GW_PMT_PROC_SRV.DynEnt" sap:searchable="true" sap:requires-filter="true"
+				sap:content-version="1"/><EntitySet Name="DynEntItemSet" EntityType="ZDPMT_GW_PMT_PROC_SRV.DynEntItem" sap:searchable="true" sap:requires-filter="true"
+				sap:content-version="1"/>
+				<AssociationSet Name="Ass_DynEntToDynEntItemSet" Association="ZDPMT_GW_PMT_PROC_SRV.Ass_DynEntToDynEntItem" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="DynEntSet" Role="FromRole_Ass_DynEntToDynEntItem"/><End EntitySet="DynEntItemSet" Role="ToRole_Ass_DynEntToDynEntItem"/></AssociationSet>
+			</EntityContainer>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZDPMT_GW_PMT_PROC_SRV.DynEntItem/COMPLEXITY">
+				<Annotation Term="com.sap.vocabularies.Common.v1.ValueList">
+					<Record><PropertyValue Property="Label" String="COMPLEXITY"/><PropertyValue Property="CollectionPath" String="VL_FV_ZDPMT_DO_COMPLEXITY"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterInOut"><PropertyValue Property="LocalDataProperty" PropertyPath="COMPLEXITY"/><PropertyValue Property="ValueListProperty" String="Code"/></Record>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="Text"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZDPMT_GW_PMT_PROC_SRV.DynEntItem/FIELDNAME">
+				<Annotation Term="com.sap.vocabularies.Common.v1.ValueList">
+					<Record><PropertyValue Property="CollectionPath" String="VL_CH_DD03L"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="TABNAME"/></Record>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterInOut"><PropertyValue Property="LocalDataProperty" PropertyPath="FIELDNAME"/><PropertyValue Property="ValueListProperty" String="FIELDNAME"/></Record>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="AS4LOCAL"/></Record>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="AS4VERS"/></Record>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="POSITION"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZDPMT_GW_PMT_PROC_SRV.DynEntItem/LEG_IMP">
+				<Annotation Term="com.sap.vocabularies.Common.v1.ValueList">
+					<Record><PropertyValue Property="Label" String="LegacyImpact"/><PropertyValue Property="CollectionPath" String="VL_FV_ZDPMT_DO_LEG_IMP"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterInOut"><PropertyValue Property="LocalDataProperty" PropertyPath="LEG_IMP"/><PropertyValue Property="ValueListProperty" String="Code"/></Record>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="Text"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZDPMT_GW_PMT_PROC_SRV.DynEntItem/MIDDLEWARE">
+				<Annotation Term="com.sap.vocabularies.Common.v1.ValueList">
+					<Record><PropertyValue Property="Label" String="MIDDLEWARE"/><PropertyValue Property="CollectionPath" String="VL_FV_ZDPMT_DO_MIDDLEWARE"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterInOut"><PropertyValue Property="LocalDataProperty" PropertyPath="MIDDLEWARE"/><PropertyValue Property="ValueListProperty" String="Code"/></Record>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="Text"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZDPMT_GW_PMT_PROC_SRV.DynEntItem/PHASE">
+				<Annotation Term="com.sap.vocabularies.Common.v1.ValueList">
+					<Record><PropertyValue Property="Label" String="PHASE"/><PropertyValue Property="CollectionPath" String="VL_FV_ZDPMT_DO_PHASE"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterInOut"><PropertyValue Property="LocalDataProperty" PropertyPath="PHASE"/><PropertyValue Property="ValueListProperty" String="Code"/></Record>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="Text"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZDPMT_GW_PMT_PROC_SRV.DynEntItem/PROCESSAREA">
+				<Annotation Term="com.sap.vocabularies.Common.v1.ValueList">
+					<Record><PropertyValue Property="Label" String="PROCESSAREA"/><PropertyValue Property="CollectionPath" String="VL_FV_ZDPMT_DO_PROCESSAREA"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterInOut"><PropertyValue Property="LocalDataProperty" PropertyPath="PROCESSAREA"/><PropertyValue Property="ValueListProperty" String="Code"/></Record>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="Text"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZDPMT_GW_PMT_PROC_SRV.DynEntItem/RICEFW_TYP">
+				<Annotation Term="com.sap.vocabularies.Common.v1.ValueList">
+					<Record><PropertyValue Property="Label" String="RICEFW_TYP"/><PropertyValue Property="CollectionPath" String="VL_FV_ZDPMT_DO_RICEFW_TYP"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterInOut"><PropertyValue Property="LocalDataProperty" PropertyPath="RICEFW_TYP"/><PropertyValue Property="ValueListProperty" String="Code"/></Record>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="Text"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZDPMT_GW_PMT_PROC_SRV.DynEntItem/TS_STAT">
+				<Annotation Term="com.sap.vocabularies.Common.v1.ValueList">
+					<Record><PropertyValue Property="Label" String="TS Status"/><PropertyValue Property="CollectionPath" String="VL_FV_ZDPMT_DO_TS_STAT"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterInOut"><PropertyValue Property="LocalDataProperty" PropertyPath="TS_STAT"/><PropertyValue Property="ValueListProperty" String="Code"/></Record>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="Text"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="ZDPMT_GW_PMT_PROC_SRV.VL_CH_DD03L/FIELDNAME">
+				<Annotation Term="com.sap.vocabularies.Common.v1.ValueList">
+					<Record><PropertyValue Property="CollectionPath" String="VL_CH_DD03L"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="TABNAME"/></Record>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterInOut"><PropertyValue Property="LocalDataProperty" PropertyPath="FIELDNAME"/><PropertyValue Property="ValueListProperty" String="FIELDNAME"/></Record>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="AS4LOCAL"/></Record>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="AS4VERS"/></Record>
+								<Record Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly"><PropertyValue Property="ValueListProperty" String="POSITION"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZDPMT_GW_PMT_PROC_SRV/$metadata"/><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZDPMT_GW_PMT_PROC_SRV/$metadata"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

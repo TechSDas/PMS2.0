@@ -1,0 +1,19 @@
+<mvc:View controllerName="fi.pms.solution.ZFI_PMS_SOL_PREVIEW.controller.View1" xmlns="sap.m" xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	class="sapUiSizeCompact sapUiNoContentPadding sapUiNoMarginTop sapUiNoMarginEnd sapUiNoMarginBottom sapUiNoMarginBegin"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:uxap="sap.uxap">
+	<uxap:ObjectPageLayout id="smartFormContainer">
+		<uxap:headerTitle>
+			<uxap:ObjectPageHeader objectTitle="{viewData>/ProjTitle}">
+				<uxap:actions>
+					<uxap:ObjectPageHeaderActionButton text="Save" icon="sap-icon://save" press="onUserFormSave" tooltip="Save" visible="{VisibilityModel>/UserControlVisibility}"/>
+					<uxap:ObjectPageHeaderActionButton text="Close" icon="sap-icon://decline" press="onBack" tooltip="Close"/>
+				</uxap:actions>
+			</uxap:ObjectPageHeader>
+		</uxap:headerTitle>
+		<uxap:headerContent>
+			<ObjectAttribute title="Process" text="{viewData>/processTitle}"/>
+		</uxap:headerContent>
+		<uxap:sections></uxap:sections>
+	</uxap:ObjectPageLayout>
+</mvc:View>
